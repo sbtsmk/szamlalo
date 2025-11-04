@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="szamlalo.css">
+</head>
+<body>
+    <div class="container">
+         <div class="content"></div>
+    <button id="Minus" onclick="change(this)">-</button>
+    <div id="szamlalo">0</div>
+    <button id="Plus" onclick="change(this)">+</button>
+    <button2 onclick="nullazas()">0</button2>
+    </div>
+    <script>
+        const szamlaloDiv = document.getElementById("szamlalo")
+        const btnMinus=document.getElementById(`Minus`)
+        const btnPlus=document.getElementById(`Plus`)
+        let szamlalo = 0
+
+        function change(domObj){
+            console.log(domObj.textContent);
+            const operator = domObj.textContent
+            if(operator == "+") szamlalo++
+            else szamlalo--
+
+            szamlaloDiv.textContent = szamlalo
+
+            if(szamlalo < 0){
+                 szamlaloDiv.style.color="red"
+            }else{
+                szamlaloDiv.style.color="blue"
+            }
+            if(szamlalo < -4){
+                btnMinus.disabled=true
+            }else{
+                btnMinus.disabled=false
+            }
+            if(szamlalo > 4){
+                btnPlus.disabled=true
+            }else{
+                btnPlus.disabled=false
+            }
+            
+        }
+        function nullazas(){
+            btnPlus.disabled=false
+            btnMinus.disabled=false
+            szamlalo = 0
+            szamlaloDiv.textContent = szamlalo
+        }
+    </script>
+</body>
+</html>
