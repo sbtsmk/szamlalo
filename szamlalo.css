@@ -18,7 +18,7 @@ body {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #2ffc28;
     border: none;
     color: white;
     font-size: 32px;
@@ -31,7 +31,7 @@ button {
 }
 
 button:disabled {
-    background-color: #a0c8ff;
+    background-color: #047900;
     cursor: not-allowed;
 }
 
@@ -49,13 +49,13 @@ button:hover:not(:disabled) {
     align-items: center;
     font-size: 40px;
     font-weight: bold;
-    color: blue;
+    color: rgb(0, 0, 0);
 }
 button2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ff0000;
+    background-color: #f50f07;
     border: none;
     color: rgb(255, 255, 255);
     font-size: 32px;
