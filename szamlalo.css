@@ -36,7 +36,7 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-    background-color: #0066dd;
+    background-color: #2ffc28;
 }
 
 #szamlalo {
